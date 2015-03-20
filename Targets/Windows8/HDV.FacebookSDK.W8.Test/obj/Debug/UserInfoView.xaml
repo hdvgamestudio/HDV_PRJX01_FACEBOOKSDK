@@ -1,0 +1,56 @@
+﻿<UserControl
+    x:Class="HDV.FacebookSDK.Test.UserInfoView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HDV.FacebookSDK.Test"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="self"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Orientation="Vertical">
+            <Rectangle Width="200" Height="200" RadiusX="10" RadiusY="10"
+                       StrokeThickness="1" Stroke="White">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="{Binding Path=ProfileImageUri, ElementName=self}"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="ID: " FontWeight="Black"/>
+                <TextBlock Text="{Binding ID}"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <Grid Grid.Column="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="80"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Text="Name: " FontWeight="Bold"/>
+            <TextBlock Text="{Binding Name}" Grid.Column="1"/>
+
+            <TextBlock Text="First Name: " FontWeight="Bold" Grid.Row="1"/>
+            <TextBlock Text="{Binding FirstName}" Grid.Row="1" Grid.Column="1"/>
+
+            <TextBlock Text="Last Name: " FontWeight="Bold" Grid.Row="2"/>
+            <TextBlock Text="{Binding LastName}" Grid.Row="2" Grid.Column="1"/>
+        </Grid>
+    </Grid>
+</UserControl>
+
