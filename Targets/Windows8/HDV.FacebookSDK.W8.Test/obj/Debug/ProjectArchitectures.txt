@@ -1,2 +1,0 @@
-D:\Workspace\HDV_PRJX01_FACEBOOKSDK\Targets\Windows8\HDV.FacebookSDK.W8.Test\HDV.FacebookSDK.W8.Test.csproj;neutral
-D:\Workspace\HDV_PRJX01_FACEBOOKSDK\Targets\Windows8\HDV.FacebookSDK.W8\HDV.FacebookSDK.W8.csproj;neutral
