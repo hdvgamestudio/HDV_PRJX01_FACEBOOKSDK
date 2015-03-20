@@ -126,7 +126,7 @@ namespace HDV.FacebookSDK.W8.Test
                     friends.Add(friend);
                 }
 
-                await FacebookClient.Current.GameService.GetMyScrore();
+                var scores = await FacebookClient.Current.GameService.GetUserScrores("me");
             }
             catch (GraphAPIRequestException graphAPIException)
             {
